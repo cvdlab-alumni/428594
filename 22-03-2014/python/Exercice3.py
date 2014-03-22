@@ -1,3 +1,4 @@
+from pyplasm import *
 vertsOct = [[0,15],[0,25],[10,35],[20,35],[30,25],[30,15],[20,5],[10,5]]
 octNordP = JOIN(AA(MK)(vertsOct)) 
 octNord = PROD([octNordP,Q(10)])
@@ -59,4 +60,4 @@ top7 = JOIN(AA(MK)(vertsTop7))
 
 top = STRUCT([top0,top1,top2,top3,top4,top5,top6,top7])
 
-VIEW(STRUCT([topSmall0,two,one,zero,topBig,top]))
+VIEW(STRUCT([COLOR([0.93,0.36,0.25])(topSmall0),two,one,zero,COLOR([0.93,0.36,0.25])(topBig),COLOR([0.93,0.36,0.25])(top)]))

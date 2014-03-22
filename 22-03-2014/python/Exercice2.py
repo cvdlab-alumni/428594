@@ -1,3 +1,4 @@
+from pyplasm import *
 #facciata nordest
 #creo la facciata 2d del piano terra
 
@@ -29,8 +30,8 @@ faceNETop = JOIN(AA(MK)(vertsSmallTop))
 translaFive = T(3)(33)
 
 
-ne = STRUCT([octNE, T(3)(10)(faceNEPartial),translaSec(faceNETopWall),translaThird(faceNETopBig),
-	translaFourth(faceNESmallWall), translaFive(faceNETop)])
+ne = STRUCT([octNE, T(3)(10)(faceNEPartial),translaSec(faceNETopWall),COLOR([0.93,0.36,0.25])(translaThird(faceNETopBig)),
+	translaFourth(faceNESmallWall), COLOR([0.93,0.36,0.25])(translaFive(faceNETop))])
 
 #facciata est
 #creo la facciata 2d del piano terra
@@ -75,8 +76,8 @@ faceEstTop = JOIN(AA(MK)(vertsSmallTop))
 translaFive = T(3)(33)
 
 
-east = STRUCT([octEst,T(3)(10)(faceEst),translaSec(faceEstTopWall),translaThird(faceEstTopBig),
-	translaFourth(faceEstSmallWall), translaFive(faceEstTop),COLOR([0.36,0.25,0.2])(doors)])
+east = STRUCT([octEst,T(3)(10)(faceEst),translaSec(faceEstTopWall),COLOR([0.93,0.36,0.25])(translaThird(faceEstTopBig)),
+	translaFourth(faceEstSmallWall), COLOR([0.93,0.36,0.25])(translaFive(faceEstTop)),COLOR([0.36,0.25,0.2])(doors)])
 
 #facciata nordovest
 
@@ -109,8 +110,8 @@ translaFive = T(3)(33)
 
 
 
-no = STRUCT([octNO,T(3)(10)(faceNOPartial),translaSec(faceNOTopWall),translaThird(faceNOTopBig),
-	translaFourth(faceNOSmallWall), translaFive(faceNOTop)])
+no = STRUCT([octNO,T(3)(10)(faceNOPartial),translaSec(faceNOTopWall),COLOR([0.93,0.36,0.25])(translaThird(faceNOTopBig)),
+	translaFourth(faceNOSmallWall), COLOR([0.93,0.36,0.25])(translaFive(faceNOTop))])
 
 #facciata ovest
 #creo la facciata 2d del piano terra
@@ -159,8 +160,8 @@ faceOvestTop = JOIN(AA(MK)(vertsSmallTop))
 translaFive = T(3)(33)
 
 
-west = STRUCT([octOvest,T(3)(10)(faceOvest),translaSec(faceOvestTopWall),translaThird(faceOvestTopBig),
-	translaFourth(faceOvestSmallWall), translaFive(faceOvestTop),COLOR([0.36,0.25,0.2])(doors)])
+west = STRUCT([octOvest,T(3)(10)(faceOvest),translaSec(faceOvestTopWall),COLOR([0.93,0.36,0.25])(translaThird(faceOvestTopBig)),
+	translaFourth(faceOvestSmallWall), COLOR([0.93,0.36,0.25])(translaFive(faceOvestTop)),COLOR([0.36,0.25,0.2])(doors)])
 
 
 #facciata sudest
@@ -194,7 +195,7 @@ faceSETop = JOIN(AA(MK)(vertsSmallTop))
 translaFive = T(3)(33)
 
 
-se = STRUCT([octSE, T(3)(10)(faceSEPartial),translaSec(faceSETopWall),translaThird(faceSETopBig),	translaFourth(faceSESmallWall), translaFive(faceSETop)])
+se = STRUCT([octSE, T(3)(10)(faceSEPartial),COLOR([0.93,0.36,0.25])(translaSec(faceSETopWall)),COLOR([0.93,0.36,0.25])(translaThird(faceSETopBig)),	translaFourth(faceSESmallWall), COLOR([0.93,0.36,0.25])(translaFive(faceSETop))])
 
 #facciata nord est
 #creo la facciata 2d del piano terra
@@ -227,8 +228,8 @@ faceNETop = JOIN(AA(MK)(vertsSmallTop))
 translaFive = T(3)(33)
 
 
-ne = STRUCT([octNE, T(3)(10)(faceNEPartial),translaSec(faceNETopWall),translaThird(faceNETopBig),
-	translaFourth(faceNESmallWall), translaFive(faceNETop)])
+ne = STRUCT([octNE, T(3)(10)(faceNEPartial),translaSec(faceNETopWall),COLOR([0.93,0.36,0.25])(translaThird(faceNETopBig)),
+	translaFourth(faceNESmallWall), COLOR([0.93,0.36,0.25])(translaFive(faceNETop)])
 
 #facciata sudovest
 
@@ -260,8 +261,8 @@ faceSOTop = JOIN(AA(MK)(vertsSmallTop))
 translaFive = T(3)(33)
 
 
-so = STRUCT([octSO, T(3)(10)(faceSOPartial),translaSec(faceSOTopWall),translaThird(faceSOTopBig),
-	translaFourth(faceSOSmallWall), translaFive(faceSOTop)])
+so = STRUCT([octSO, T(3)(10)(faceSOPartial),translaSec(faceSOTopWall),COLOR([0.93,0.36,0.25])(translaThird(faceSOTopBig)),
+	translaFourth(faceSOSmallWall), COLOR([0.93,0.36,0.25])(translaFive(faceSOTop))])
 
 	#facciata sud
 	#creo la facciata 2d del piano terra
@@ -310,7 +311,7 @@ faceSudTop = JOIN(AA(MK)(vertsSmallTop))
 translaFive = T(3)(33)
 
 
-south = STRUCT([octSud,T(3)(10)(faceSud),translaSec(faceSudTopWall),translaThird(faceSudTopBig),translaFourth(faceSudSmallWall), translaFive(faceSudTop),COLOR([0.36,0.25,0.2])(doors)])
+south = STRUCT([octSud,T(3)(10)(faceSud),translaSec(faceSudTopWall),COLOR([0.93,0.36,0.25])(translaThird(faceSudTopBig)),translaFourth(faceSudSmallWall), COLOR([0.93,0.36,0.25])(translaFive(faceSudTop)),COLOR([0.36,0.25,0.2])(doors)])
 
 #facciata nord
 #creo la facciata 2d del rettangolo
@@ -368,10 +369,11 @@ faceNordTop = JOIN(AA(MK)(vertsSmallTop))
 translaFive = T(3)(33)
 
 
-north = STRUCT([door,rectNord,translaFirst(topSmallNord),T(3)(10)(faceNord),translaSec(faceNordTopWall),translaThird(faceNordTopBig),
-                translaFourth(faceNordSmallWall), translaFive(faceNordTop),T(3)(10)(rectTop)])
+north = STRUCT([door,rectNord,COLOR([0.93,0.36,0.25](translaFirst(topSmallNord)),T(3)(10)(faceNord),translaSec(faceNordTopWall),COLOR([0.93,0.36,0.25])(translaThird(faceNordTopBig)),
+                translaFourth(faceNordSmallWall), COLOR([0.93,0.36,0.25])(translaFive(faceNordTop))),
+                COLOR([0.93,0.36,0.25])(T(3)(10)(rectTop)))])
 
 
 mock_up_3D = STRUCT([north,south,west,east,se,no,ne,so])
 
-
+VIEW(mock_up_3D)

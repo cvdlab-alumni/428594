@@ -1,3 +1,4 @@
+from pyplasm import *
 #facciata nordest
 #creo la facciata 2d del piano terra
 
