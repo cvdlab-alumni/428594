@@ -1,4 +1,4 @@
-# from pyplasm import *
+from pyplasm import *
 
 vertsOct = [[0,15],[0,25],[10,35],[20,35],[30,25],[30,15],[20,5],[10,5]]
 vertsRect = [[10,0],[20,0],[20,5],[10,5]]

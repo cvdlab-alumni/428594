@@ -229,7 +229,7 @@ translaFive = T(3)(33)
 
 
 ne = STRUCT([octNE, T(3)(10)(faceNEPartial),translaSec(faceNETopWall),COLOR([0.93,0.36,0.25])(translaThird(faceNETopBig)),
-	translaFourth(faceNESmallWall), COLOR([0.93,0.36,0.25])(translaFive(faceNETop)])
+	translaFourth(faceNESmallWall), COLOR([0.93,0.36,0.25])(translaFive(faceNETop))])
 
 #facciata sudovest
 
@@ -369,9 +369,7 @@ faceNordTop = JOIN(AA(MK)(vertsSmallTop))
 translaFive = T(3)(33)
 
 
-north = STRUCT([door,rectNord,COLOR([0.93,0.36,0.25](translaFirst(topSmallNord)),T(3)(10)(faceNord),translaSec(faceNordTopWall),COLOR([0.93,0.36,0.25])(translaThird(faceNordTopBig)),
-                translaFourth(faceNordSmallWall), COLOR([0.93,0.36,0.25])(translaFive(faceNordTop))),
-                COLOR([0.93,0.36,0.25])(T(3)(10)(rectTop)))])
+north = STRUCT([door,rectNord,COLOR([0.93,0.36,0.25])(translaFirst(topSmallNord)),T(3)(10)(faceNord),translaSec(faceNordTopWall),COLOR([0.93,0.36,0.25])(translaThird(faceNordTopBig)),translaFourth(faceNordSmallWall),  COLOR([0.93,0.36,0.25])(translaFive(faceNordTop)), COLOR([0.93,0.36,0.25])(T(3)(10)(rectTop))])
 
 
 mock_up_3D = STRUCT([north,south,west,east,se,no,ne,so])
