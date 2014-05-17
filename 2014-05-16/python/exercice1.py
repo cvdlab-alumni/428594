@@ -23,6 +23,7 @@ V,CV = masterSoggiorno
 hpc = SKEL_1(STRUCT(MKPOLS(masterSoggiorno)))
 hpc = cellNumbering (masterSoggiorno,hpc)(range(len(CV)),CYAN,2)
 contaCelle += len(CV)
+infoCels = STRUCT([hpc])
 #VIEW(hpc)
 
 #Finestra
@@ -61,8 +62,10 @@ masterSoggiorno = STRUCT(MKPOLS(masterSoggiorno))
 masterGenitori = assemblyDiagramInit([3,2,2])([[1,5,1],[6,1],[1,10]])
 V,CV = masterGenitori
 hpc = SKEL_1(STRUCT(MKPOLS(masterGenitori)))
-hpc = cellNumbering (masterGenitori,hpc)(range(len(CV)),CYAN,2)
+hpc = cellNumbering (masterGenitori,hpc)(range(len(CV)),CYAN,2,contaCelle)
 contaCelle += len(CV)
+infoCels = STRUCT([T(2)(9)(hpc),infoCels])
+
 #VIEW(hpc)
 
 #Finestra
@@ -101,8 +104,11 @@ masterGenitori = T(2)(9)(STRUCT(MKPOLS(masterGenitori)))
 masterRipostiglio = assemblyDiagramInit([1,3,2])([[3],[1,2,1],[1,10]])
 V,CV = masterRipostiglio
 hpc = SKEL_1(STRUCT(MKPOLS(masterRipostiglio)))
-hpc = cellNumbering (masterRipostiglio,hpc)(range(len(CV)),CYAN,2)
+hpc = cellNumbering (masterRipostiglio,hpc)(range(len(CV)),CYAN,2,contaCelle)
 contaCelle += len(CV)
+infoCels = STRUCT([T([1,2])([7,11])(hpc),infoCels])
+
+
 #VIEW(hpc)
 
 #Porta
@@ -127,8 +133,9 @@ masterRipostiglio = T([1,2])([7,11])(STRUCT(MKPOLS(masterRipostiglio)))
 masterCorridoio = assemblyDiagramInit([1,2,2])([[3],[1,10],[1,10]])
 V,CV = masterCorridoio
 hpc = SKEL_1(STRUCT(MKPOLS(masterCorridoio)))
-hpc = cellNumbering (masterCorridoio,hpc)(range(len(CV)),CYAN,2)
+hpc = cellNumbering (masterCorridoio,hpc)(range(len(CV)),CYAN,2,contaCelle)
 contaCelle += len(CV)
+infoCels = STRUCT([ T(1)(7)(hpc),infoCels])
 #VIEW(hpc)
 
 #Porta
@@ -152,8 +159,9 @@ masterCorridoio = T(1)(7)(STRUCT(MKPOLS(masterCorridoio)))
 masterCamera = assemblyDiagramInit([3,3,2])([[1,4,1],[1,7,1],[1,10]])
 V,CV = masterCamera
 hpc = SKEL_1(STRUCT(MKPOLS(masterCamera)))
-hpc = cellNumbering (masterCamera,hpc)(range(len(CV)),CYAN,2)
+hpc = cellNumbering (masterCamera,hpc)(range(len(CV)),CYAN,2,contaCelle)
 contaCelle += len(CV)
+infoCels = STRUCT([T([1,2])([10,9])(hpc),infoCels])
 #VIEW(hpc)
 
 #Finestra
@@ -191,8 +199,10 @@ masterCamera = T([1,2])([10,9])(STRUCT(MKPOLS(masterCamera)))
 masterBagno = assemblyDiagramInit([3,3,2])([[1,4,1],[1,3,1],[1,10]])
 V,CV = masterBagno
 hpc = SKEL_1(STRUCT(MKPOLS(masterBagno)))
-hpc = cellNumbering (masterBagno,hpc)(range(len(CV)),CYAN,2)
+hpc = cellNumbering (masterBagno,hpc)(range(len(CV)),CYAN,2,contaCelle)
 contaCelle += len(CV)
+infoCels = STRUCT([T([1,2])([10,4])(hpc),infoCels])
+
 #VIEW(hpc)
 
 #Finestra
@@ -230,8 +240,9 @@ masterBagno = T([1,2])([10,4])(STRUCT(MKPOLS(masterBagno)))
 masterCucina = assemblyDiagramInit([3,2,2])([[1,4,1],[1,3],[1,10]])
 V,CV = masterCucina
 hpc = SKEL_1(STRUCT(MKPOLS(masterCucina)))
-hpc = cellNumbering (masterCucina,hpc)(range(len(CV)),CYAN,2)
+hpc = cellNumbering (masterCucina,hpc)(range(len(CV)),CYAN,2,contaCelle)
 contaCelle += len(CV)
+infoCels = STRUCT([T(1)(10)(hpc),infoCels])
 #VIEW(hpc)
 
 #Finestra
@@ -273,6 +284,7 @@ hpc = SKEL_1(STRUCT(MKPOLS(masterbalconcino)))
 hpc = cellNumbering (masterbalconcino,hpc)(range(len(CV)),CYAN,2,contaCelle)
 contaCelle += len(CV)
 masterbalconcino = COLOR([0.81,0.57,0.45])(T(2)(-5)(STRUCT(MKPOLS(masterbalconcino))))
+infoCels = STRUCT([hpc,infoCels])
 #VIEW(hpc)
 
 interno = COLOR([0.96,0.8,0.69])(STRUCT([masterSoggiorno,masterCucina,masterBagno,masterCamera,masterCorridoio,masterRipostiglio,masterGenitori]))
@@ -281,4 +293,4 @@ appartamento = STRUCT([masterbalconcino,interno])
 
 #VIEW(STRUCT([masterSoggiorno,masterCucina,masterBagno,masterCamera,masterCorridoio,masterRipostiglio,masterGenitori]))
 
-
+#VIEW(infocels)
