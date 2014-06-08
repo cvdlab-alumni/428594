@@ -19,11 +19,11 @@ fiori = TEXTURE('/Users/Sirian/Desktop/2014-05-16/image/fiori.jpg')
 prato = TEXTURE('/Users/Sirian/Desktop/2014-05-16/image/prato.jpg')
 
 def disk2D(p):
-  u,v = p
-  return [v*COS(u), v*SIN(u)]
+    u,v = p
+    return [v*COS(u), v*SIN(u)]
 
 def color(color):
-	return [color[0]/255., color[1]/255., color[2]/255.]	
+	return [color[0]/255., color[1]/255., color[2]/255.]
 
 #porta
 porta_piena = CUBOID([2,8,1])
@@ -103,7 +103,7 @@ balconeTondo = STRUCT([balconeTondo1,balconeTondo2])
 #fine
 
 #balcone piccolo tondo
-domain2D = PROD([INTERVALS(PI/2)(64), INTERVALS(10)(3)]) 
+domain2D = PROD([INTERVALS(PI/2)(64), INTERVALS(10)(3)])
 balconeTondo_piccoloPiano = MAP(disk2D)(domain2D)
 balconeTondo_piccoloPieno = T([1,2])([8,15])(S([1,2])([0.8,0.5])((R([1,2])(PI/2)(PROD([balconeTondo_piccoloPiano,Q(5)])))))
 balconeTondo_piccoloScavato = T([1,2,3])([8,15,1])(S([1,2,3])([0.7,0.4,0.8])((R([1,2])(PI/2)(PROD([balconeTondo_piccoloPiano,Q(5)])))))
@@ -202,7 +202,7 @@ master = master[0],[cell for k,cell in enumerate(master[1]) if not (k in toRemov
 hpc = SKEL_1(STRUCT(MKPOLS(master)))
 hpc = cellNumbering (master,hpc)(range(len(master[1])),CYAN,2)
 
-#Porta d'ingresso 
+#Porta d'ingresso
 toMerge = 64
 diagram = assemblyDiagramInit([3,1,2])([[1,2,1],[1],[8,2]])
 master = diagram2cell(diagram,master,toMerge)
