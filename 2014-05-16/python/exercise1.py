@@ -1,4 +1,18 @@
+from pyplasm import *
+import sys
+sys.path.insert(0, '/Library/Python/2.7/site-packages/larcc/lib/py')
 from larcc import *
+from simplexn import *
+from lar2psm import *
+from largrid import *
+from splines import *
+from mapper import *
+from boolean import *
+from boolean1 import *
+from boolean2 import *
+from sysml import *
+from architectural import *
+from morph import *
 
 #colori
 grigio = [186,186,186]

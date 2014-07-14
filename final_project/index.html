@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+ <head> 
+  <title>428594</title> 
+ <style>
+     body{
+      margin: 0;
+      overflow: hidden;
+    }
+      #stats {  /* Align stats top-left */
+      position: absolute;
+      left: 0px;
+      top: 0px;
+    }
+
+  </style> 
+  </head> 
+  <body>
+    <!-- JavaScript libraries -->
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script> 
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/three.js/r67/three.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/stats.js/r11/Stats.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/dat-gui/0.5/dat.gui.min.js"></script>
+    <script src="assets/libs/TrackballControls.js"></script>
+    <script src="assets/libs/tween.min.js"></script>
+    <script src="assets/libs/keyframe.js"></script>
+    <script src="assets/libs/keyframe.js"></script>
+    <script src="assets/libs/MTLLoader.js"></script>
+    <script src="assets/libs/OBJMTLLoader.js"></script>
+    <script src="assets/libs/OBJLoader.js"></script>    
+    <script src="assets/libs/THREEx.KeyboardState.js"></script>
+
+
+    <!-- Utility Function -->
+    <script src="scripts/function.js"></script>    
+    <script src="scripts/init.js"></script>    
+    <script src="scripts/utilityFunction.js"></script>    
+    <script src="scripts/door.js"></script>    
+    <script src="scripts/window.js"></script>    
+    <script src="scripts/kitchen.js"></script>
+    <script src="scripts/dinningroom.js"></script>    
+    <script src="scripts/corridor.js"></script>    
+    <script src="scripts/bathroom.js"></script>    
+    <script src="scripts/closet.js"></script>    
+    <script src="scripts/beedroom.js"></script>    
+    <script src="scripts/balcony.js"></script>  
+    <script src="scripts/gui.js"></script>   
+    <script src="scripts/animation.js"></script>     
+  
+
+
+    <p hidden>
+    <video id="video1" src="video/video1.mp4" controls="true" autoplay="true"></video> 
+    <video id="video2" src="video/video2.mp4" controls="true" autoplay="true"></video> 
+    <video id="video3" src="video/video3.mp4" controls="true" autoplay="true"></video> 
+    <video id="video4" src="video/video4.mp4" controls="true" autoplay="true"></video> 
+    <video id="video5" src="video/video5.mp4" controls="false" autoplay="true"></video> 
+    </p>
+    <div id="pointer"></div>
+
+
+    <script>
+          
+    $('body').append(renderer.domElement);
+
+
+           
+    var loader = new THREE.OBJLoader();
+          loader.load('model/obj_master.obj', function (obj) {
+          global_o = obj;
+            material = new THREE.MeshBasicMaterial({color: 0xFFFAF0, side: THREE.DoubleSide})
+           var mesh = new THREE.Mesh(obj.children[0].geometry, material);
+           mesh.rotation.x = 3*Math.PI/2,Math;
+           mesh.scale.set(x,z,y);
+           scene.add(mesh);
+          });
+
+          var kitchen = mkKitchen();
+          scene.add(kitchen);
+          var dinningroom = mkDinningroom();
+          scene.add(dinningroom);
+          var corridor = mkCorridor();
+          scene.add(corridor);
+          var bathroom = mkBathroom();
+          scene.add(bathroom);
+          var closet = mkCloset();
+          scene.add(closet);
+          var beedroom = mkBeedroom();
+          scene.add(beedroom);
+          var win = mkAllWindow();
+          scene.add(win);
+          var door = mkAllDoor();
+          scene.add(door);
+          var balcony = mkBalcony();
+          scene.add(balcony);
+          var garden = mkGarden();
+          scene.add(garden);
+
+
+         
+          updateStats();
+          render();
+
+        
+    </script>  
+ </body>
+</html>
